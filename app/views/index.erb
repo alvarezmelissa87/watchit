@@ -9,8 +9,11 @@
 
   <div class="movies">
     <ol><% @movies.each do |movie| %>
-      <li><%= movie["title"] %></li>
-      <li><%= movie["synopsis"] %></li>
+      <li><%= movie.title %></li>
+        <ul>
+          <li><%= movie.rating %></li>
+          <li><%= movie.short_synopsis %></li>
+        </ul>
       <% end %>
     </ol>
   </div>

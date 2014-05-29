@@ -26,5 +26,10 @@ module RottenTomato
       @rating = args["ratings"]["audience_score"]#######  rating: {audience_score: value} need to access nested hash
       @synopsis = args["synopsis"]
     end
+
+    def short_synopsis
+       short = @synopsis.slice(0,150) 
+       return  short + "..."
+    end
   end
 end
