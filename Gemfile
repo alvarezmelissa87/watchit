@@ -19,6 +19,8 @@ gem 'rake'
 gem 'shotgun'
 
 gem 'httparty'
+gem 'dotenv'
+gem 'faraday'
 
 group :test do
   gem 'shoulda-matchers'
@@ -31,4 +33,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'debugger'
 end

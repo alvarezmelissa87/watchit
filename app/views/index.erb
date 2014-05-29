@@ -1,12 +1,18 @@
 <div class="container">
   <h1>WATCHitNEXT</h1>
-  <div class="movies">
-  </div>
 
   <div class="search">
     <form action="/" method="post">
       <input type="text" name="search_term">
     </form>
+  </div>
+
+  <div class="movies">
+    <ol><% @movies.each do |movie| %>
+      <li><%= movie["title"] %></li>
+      <li><%= movie["synopsis"] %></li>
+      <% end %>
+    </ol>
   </div>
 
 </div>
