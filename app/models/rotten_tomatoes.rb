@@ -1,23 +1,29 @@
+require 'json'
+require 'httparty'
 
-module HackerNews
+module RottenTomato
 
   class Client
     include HTTParty
 
-    base_uri "www.someAPI.com"
+    base_uri "http://api.rottentomatoes.com/api/public/v1.0."
 
     def initialize
-
     end
 
-    def posts
-      response = self.class.get('/some/endpoint', {
-        query: { with: 'paramaters' }
-        })
-
+    def movies
+      response = self.class.get('/lists/movies/opening.json?limit=10&country=us&apikey=#{KEY}')
+                  # this call returns 10 movies in theaters in the US
       return response.body
     end
-
   end
 
+  class Movie
+    attr_reader :title, :rating, :synopsis
+    def initialize(args)
+      @title = args["title"]
+      @rating = args["ratings"]["audience_score"]#######  rating: {audience_score: value} need to access nested hash
+      @synopsis = args["synopsis"]
+    end
+  end
 end
