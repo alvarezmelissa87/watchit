@@ -6,7 +6,7 @@
   <div class="search">
     <img src="images/tinysearch.png">
     <form action="/" method="post">
-      <input type="text" name="search_term">
+      <input type="text" name="title" placeholder="Enter movie title">
     </form>
   </div>
 
@@ -15,7 +15,7 @@
     <ol class="ordered"><% @movies.each do |movie| %>
     <div class="movie_container">
       <img src="<%= movie.image %>">
-      <li><a href="#"><%= movie.title %></a></li>
+      <li><a href="/movie"><%= movie.title %></a></li>
         <ul class="unordered">
           <li><%= movie.rating%>%</li>
           <li class="short_synopsis"><%= movie.short_synopsis %></li>

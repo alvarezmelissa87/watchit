@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('a').on('click', showSynopsis)
+  $('.movie_container').on('click', 'li a', showSynopsis)
 });
 
 function showSynopsis(e) {
