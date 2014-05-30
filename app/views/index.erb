@@ -18,7 +18,8 @@
       <li><a href="#"><%= movie.title %></a></li>
         <ul class="unordered">
           <li><%= movie.rating%>%</li>
-          <li><%= movie.short_synopsis %></li>
+          <li class="short_synopsis"><%= movie.short_synopsis %></li>
+          <li class="long hidden"><%= movie.synopsis %></li>
         </ul>
       </div>
       <% end %>

@@ -30,6 +30,10 @@ li {
   font-family: 'Ubuntu Condensed', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .movie_container img {
   float:left;
   margin-right: 5%;
