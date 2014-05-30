@@ -20,11 +20,12 @@ module RottenTomato
   end
 
   class Movie
-    attr_reader :title, :rating, :synopsis
+    attr_reader :title, :rating, :synopsis, :image
     def initialize(args)
       @title = args["title"]
       @rating = args["ratings"]["audience_score"]#######  rating: {audience_score: value} need to access nested hash
       @synopsis = args["synopsis"]
+      @image = args["posters"]["thumbnail"]
     end
 
     def short_synopsis

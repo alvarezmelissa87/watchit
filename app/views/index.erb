@@ -2,18 +2,22 @@
   <h1>WATCHitNEXT</h1>
 
   <div class="search">
+    <img src="images/tinysearch.png">
     <form action="/" method="post">
       <input type="text" name="search_term">
     </form>
   </div>
 
   <div class="movies">
-    <ol><% @movies.each do |movie| %>
+    <ol class="ordered"><% @movies.each do |movie| %>
+    <div class="movie_container">
+      <img src="<%= movie.image %>">
       <li><%= movie.title %></li>
-        <ul>
-          <li><%= movie.rating %></li>
+        <ul class="unordered">
+          <li><%= movie.rating%>%</li>
           <li><%= movie.short_synopsis %></li>
         </ul>
+      </div>
       <% end %>
     </ol>
   </div>

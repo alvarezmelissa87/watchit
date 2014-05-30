@@ -1,0 +1,31 @@
+
+
+h1 {
+	padding: 3%;
+	background-color: #bf0000;
+	color: white;
+	text-align: center;
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+ul {
+  display:inline;
+}
+
+.movie_container img {
+  float:left;
+}
+
+.movie_container {
+  margin-top: 4%;
+  clear:both;
+}
+
+.search {
+  margin-right: 20%;
+  margin-left: 40%;
+}
+
+.search form {
+  display:inline;
+}
