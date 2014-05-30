@@ -1,17 +1,19 @@
+
 $(document).ready(function() {
-  $('.movie_container').on('click', 'li a', showSynopsis)
+  $('li a').on('click', longSynopsis)
 });
 
-function showSynopsis(e) {
-  e.preventDefault;
-  var ajaxRequest = $.ajax({
-    url: '/',
-    type: 'GET',
-  })
-  ajaxRequest.done(longSynopsis);
-}
-
-function longSynopsis(data) {
+function longSynopsis(e) {
+  e.preventDefault();
   $('.short_synopsis').addClass("hidden")
   $('.long').removeClass("hidden")
 }
+
+// function something(e) {
+//   e.preventDefault;
+//   $(this.short_synopsis).hide
+// }
+
+
+
+

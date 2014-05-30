@@ -40,17 +40,20 @@ module RottenTomato
 
   class SingleMovie
     attr_reader :title, :year, :mpaa_rating, :runtime,
-    :critics_rating, :critics_score, :audience_ratin,
-    :audience_score, :synopsis, :image
+    :critics_rating, :critics_score, :audience_rating,
+    :audience_score, :synopsis, :image, :rating, :image
 
     def initialize(args)
       @title = args["title"]
       @year = args["year"]
-      @ratiing = args["mpaa_rating"]
+      @rating = args["mpaa_rating"]
       @runtime = args["runtime"]
       @critic_rating = args["ratings"]["critics_rating"]
       @critic_score = args["ratings"]["critics_score"]
-
+      @audience_rating = args["ratings"]["audience_rating"]
+      @audience_score = args["ratings"]["audience_score"]
+      @synopsis = args["synopsis"]
+      @image = args["posters"]["original"]
     end
 
   end
