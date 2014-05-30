@@ -10,6 +10,17 @@ h1 {
 	font-family: 'Ubuntu Condensed', sans-serif;
 }
 
+h2 {
+  clear: both;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  margin-left: 5%;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
 ul {
   display:inline;
   list-style: none;

@@ -10,11 +10,12 @@
     </form>
   </div>
 
+  <h2>Now in theaters:</h2>
   <div class="movies">
     <ol class="ordered"><% @movies.each do |movie| %>
     <div class="movie_container">
       <img src="<%= movie.image %>">
-      <li><%= movie.title %></li>
+      <li><a href="#"><%= movie.title %></a></li>
         <ul class="unordered">
           <li><%= movie.rating%>%</li>
           <li><%= movie.short_synopsis %></li>

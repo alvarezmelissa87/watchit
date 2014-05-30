@@ -12,9 +12,8 @@ module RottenTomato
     end
 
     def movies
-      # response = self.class.get("/lists/movies/opening.json?limit=10&country=us&apikey=#{KEY}")
+      response = self.class.get("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json?limit=10&country=us&apikey=#{KEY}")
                   # this call returns 10 movies in theaters in the US
-        response = self.class.get ("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json?limit=10&country=us&apikey=fqnm2a6cfkchp955v9a3m7st")
       return response.body
     end
   end
@@ -29,7 +28,7 @@ module RottenTomato
     end
 
     def short_synopsis
-       short = @synopsis.slice(0,150) 
+       short = @synopsis.slice(0,150)
        return  short + "..."
     end
   end
