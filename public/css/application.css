@@ -1,4 +1,6 @@
-
+.container {
+  width: 90%;
+}
 
 h1 {
 	padding: 3%;
@@ -10,10 +12,16 @@ h1 {
 
 ul {
   display:inline;
+  list-style: none;
+}
+
+li {
+  font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .movie_container img {
   float:left;
+  margin-right: 5%;
 }
 
 .movie_container {
@@ -21,11 +29,17 @@ ul {
   clear:both;
 }
 
+
 .search {
   margin-right: 20%;
   margin-left: 40%;
 }
 
 .search form {
-  display:inline;
+  float:left;
+  margin-top: 1%;
+}
+
+.search img {
+  float:left;
 }
